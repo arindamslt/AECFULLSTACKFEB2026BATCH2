@@ -1,0 +1,127 @@
+DATE:31.01.2026
+===================================================
+FULL STACK JAVA
+===========================================================
+FRONT END
+BACK END
+DATABASE
+REAL TIME TOOLS
+========================================================
+SOFTWARE
+=========================================
+JAVA17
+MYSQL
+IDE
+===========================================
+STS===SPRING TOOL SUITE
+VISUAL STUDIO CODE
+==============================================
+REST API TOOLS
+===========================================
+POSTMAN
+==========================================================================
+MAVEN
+===========================================================================
+MAVEN IS A BUILD TOOL
+PURPOSE
+==================================================================
+AUTOMATE THE BUILD PROCESS
+BUILD PROCESS
+==================================================================
+1.DOWNLOAD THE JAR FILES AND LIBRARIES
+2.COMPILE THE SOURCE CODE
+3.EXECUTE THE TEST CASE
+4.PACKAGE INTO JAR/WAR FILES
+======================================================================
+TREMS
+=======================================================================
+ARCHIETYPE=======TYPE OF PROJECT
+                 QUICKSTART
+                  WEB
+GROUP ID========ORGANIZATION NAME
+                    COM.ABCLTD
+ARTIFACT ID=======NAME OF THE PROJECT
+VERSION============SNAPSHOT=======UNDER DEVELOPING
+                    RELEASED
+DEPENDENCY=========ADDEDN IN POM.XML THEN JAR FILES DOWNLOADED
+REPOSITORY========LOCATION OF THE JAR FILES
+   THREE TYPES
+======================================================
+1.LOCAL REPOSITORY
+2.CENTRAL REPOSITORY
+3.REMOTE REPOSITORY
+=========================================================
+pom.xml========PROJECT OBJECT MODEL
+                 HERE WE ADD DEPENDENCY AND PLUG IN
+                  IT IS THE HEART OF MAVEN
+
+GOAL
+==========================
+CLEAN
+COMPILE
+TEST
+PACKAGE
+=========================================
+MAVEN CAN BE DONE IN TWO WAYS
+=======================================================
+1.BY USING IDE
+2.BY USING COMMAND PROMPT
+==================================================================
+TestMaven1
+ADD MYSQL DEPENEDENENCY
+ADD  SPRING CORE
+CREATE THE JAR FILE
+================================
+ADD  HIBERNATE CORE DEPENDENCY
+CREATE A NEW JAR FILES
+=================================================================
+RDBMS
+======================================================================
+RELATIONAL DATABASE MANAGEMENT SYSTEM
+DATABASE
+==========================================================
+COLLECTION OF INTERELATED DATA OR TABLES
+RDBMS=DATABASE+SQL(STRUCTURED QUERY LANGUAGE)
+SOFTWARE==ORACLE,MYSQL,SQLSERVER,POSTGRESQL,SYBASE
+==============================================================
+SQL===NON PROCEDURAL LANGUAGE
+=========================================================
+WE DO NOT KNOW HOW PART
+SELECT * FROM DEPT;
+==========================================================
+JAVA===
+ARRAY
+HOW PART AND WHAT PART IS KNOWN TO US
+=========================================================
+TYPES OF SQL COMMAND
+============================================================
+DDL=DATA DEFINATION LANGUAGE
+ CREATE,ALTER,RENAME,DROP,PURGE,TRUNCATE
+DML==DATA MANIPULATION LANGUAGE
+INSERT,UPDATE,DELETE,MERGE
+DATA RETRIEVAL
+SELECT
+TCL=TRANSACTION CONTROL LANGUAGE
+COMMIT,ROLLBACK,SAVEPOINT
+DCL===DATA CONTROL LANGUAGE
+===============================
+GRANT,REVOKE
+======================================================================
+MYSQL DATA TYPES
+========================================================================
+VARCHAR===ALPHA NUMERIC
+CHAR(1)===GENDER===M/F,MARITAL STATUS===Y/N
+INT
+DECIMAL
+DATE===============YYYY-MM-DD
+TIMESTAMP
+
+SNAME(25)=========SUBHAJIT
+===========================================================================
+LOGIN MYSQL
+===============================================================================
+1.COMMAND PROMPT
+2.MYSQL COMMAND LINE CLIENT
+3.MYSQL WORKBENCH
+==============================================================================
+
