@@ -125,3 +125,177 @@ LOGIN MYSQL
 3.MYSQL WORKBENCH
 ==============================================================================
 
+DATE:02.02.2026
+===========================================================================
+COMMUNICATE JAVA WITH  DATABASE USING MAVEN
+============================================================================
+JDBC
+==============================================================================
+JAVA DATABASE CONNECTIVITY
+================================================================================
+import java.sql.*;=============SET OF CLASSES AND SET OF INTERFACES
+LIST OF INTERFACES
+============================================================================
+Connection==ESTABLISH THE CONNECTION
+Statement====EXECUTE SQL STATEMENT
+PreparedStatement==EXECUTE PRECOMPILED SQL STATEMENT
+CallableStatement==EXECUTE STORED PROCEDURE
+Resultset==========RETRIEVE DATA INTO RESULTSET
+ResultsetMetaData===GIVE DETAILS INFORMATION OF RESULTSET
+DatabaseMetaData====GIVE THE DETAILS INFORMATION OF DATABASE
+==============================================================================
+LIST OF CLASSES
+===================================================================================
+1.DriverManager===========REGISTER AND LOAD THE JDBC DRIVER
+2.Date=================Deals WITH DATE DATA TYPE
+3.TimeStamp=============DEALS WITH BOTH DATE AND TIME
+=================================================================================
+CHECKED EXCEPTION HANDLE HERE
+===============================================================
+1.ClassNotFoundException
+2.SQLException
+===========================================================
+TYPES OF DRIVER
+============================================================
+1.TYPE-I DRIVER
+2.TYPE-II DRIVER
+3.TYPE-III DRIVER
+4.TYPE-IV DRIVER
+================================================================
+STEPS OF COMMUNICATION
+=====================================================================
+1.import java.sql.*
+2.REGISTER AND LOAD THE JDBC DRIVER
+3.ESTABLISH THE COMMUNICATION
+4.CREATE THE STATEMENT
+5.EXECUTE THE STATEMENT
+6.RETRIEVE THE DATA INTO RESULTSET
+7.CLOSE THE STATEMENT AND CONNECTION
+==============================================================================
+
+TABLE:EVENT
+FIELDS     DATA TYPE    SIZE     CONSTRAINT
+ EVENTID    VARCHAR      10       PRIMARY KEY
+ EVENTNM     VARCHAR      25      NOT NULL
+ LOC         VARCHAR      25      NOT NULL
+======================================================
+USE JAVAFULLSTACKDBS;
+=============================================================
+CREATE TABLE EVENT
+(EVENTID  VARCHAR(10),
+ EVENTNM  VARCHAR(25) NOT NULL,
+ LOC      VARCHAR(25) NOT NULL,
+ CONSTRAINT EVENT_EVENTID_PK PRIMARY KEY(EVENTID)
+);
+
+mysql> DESC EVENT;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| EVENTID | varchar(10) | NO   | PRI | NULL    |       |
+| EVENTNM | varchar(25) | NO   |     | NULL    |       |
+| LOC     | varchar(25) | NO   |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
+
+INSERT INTO EVENT VALUES('EV1','MUSIC CONFERENCE','KOLKATA');
+INSERT INTO EVENT VALUES('EV2','SCIENCE CONFERENCE','CHENNAI');
+SELECT * FROM EVENT;
+
+mysql> SELECT * FROM EVENT;
++---------+--------------------+---------+
+| EVENTID | EVENTNM            | LOC     |
++---------+--------------------+---------+
+| EV1     | MUSIC CONFERENCE   | KOLKATA |
+| EV2     | SCIENCE CONFERENCE | CHENNAI |
++---------+--------------------+---------+
+2 rows in set (0.00 sec)
+
+
+ System.out.println(rs.getString(1)+"==<"+rs.getString(2)+"===>"+rs.getString(3));
+=============================================================================================
+HIBERNATE
+=========================================================================================
+HIBERNATE IS A ORM TOOL
+ORM===OBJECT RELATIONAL MAPPING
+HEAVY WEIGHT
+======================================================
+.java==compiler===.class===container=====.java===.class==o/p
+EX:JSP
+LIGHT WEIGHT
+===================================================================
+.java===compile===.class===container==take earlier .class===o/p
+FEATURES FOR LIGHT WEIGHT
+====================================
+1.LOT OF POJO CLASSES
+2.XM/ANNOTATION
+3.LESS NUMBER OF INHERITED CLASSES
+===================================================== 
+
+HibernateAll
+HIBERNATE CAN BE WRITTEN IN TWO WAYS
+==========================================================
+1.USING PURE HIBERNATE
+2.USING JPA(JAVA PERSISTENCE API)
+ORM TOOLS==HIBENATE,JDO,TOPLINK,IBATIS
+MAPPING CLASS
+============================================
+com.arindam.entity===ENTITY CLASS(POJO CLASS)
+com.arindam.app=====ClientApp
+mysql> USE JAVAFULLSTACKDBS;
+Database changed
+mysql> DESC STUDENT;
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| rollno | int          | NO   | PRI | NULL    |       |
+| deptnm | varchar(255) | YES  |     | NULL    |       |
+| sname  | varchar(255) | YES  |     | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT * FROM STUDENT;
++--------+--------+-------+
+| rollno | deptnm | sname |
++--------+--------+-------+
+|      1 | IT     | SUMAN |
++--------+--------+-------+
+1 row in set (0.00 sec)
+ANNOTATION
+===================================
+@Entity====CLASS NAME SAME AS TABLE NAME
+@id==========PRIMARY KEY
+mysql> DESC EMPLOYEE_MASTER;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| eid    | int         | NO   | PRI | NULL    | auto_increment |
+| ename  | varchar(25) | NO   |     | NULL    |                |
+| edesig | varchar(25) | NO   |     | NULL    |                |
+| joindt | date        | YES  |     | NULL    |                |
+| sal    | double      | YES  |     | NULL    |                |
+| workhr | datetime(6) | YES  |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+mysql> SELECT * FROM EMPLOYEE_MASTER;
++-----+-------+---------+------------+-------+----------------------------+
+| eid | ename | edesig  | joindt     | sal   | workhr                     |
++-----+-------+---------+------------+-------+----------------------------+
+|   1 | ARUP  | MANAGER | 2026-02-02 | 75000 | 2026-02-02 16:25:10.921000 |
+|   2 | AYAN  | MANAGER | 2026-02-02 | 65000 | 2026-02-02 16:25:10.921000 |
++-----+-------+---------+------------+-------+----------------------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
