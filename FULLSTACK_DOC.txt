@@ -228,7 +228,7 @@ LIGHT WEIGHT
 FEATURES FOR LIGHT WEIGHT
 ====================================
 1.LOT OF POJO CLASSES
-2.XM/ANNOTATION
+2.XML/ANNOTATION
 3.LESS NUMBER OF INHERITED CLASSES
 ===================================================== 
 
@@ -284,17 +284,215 @@ mysql> SELECT * FROM EMPLOYEE_MASTER;
 |   2 | AYAN  | MANAGER | 2026-02-02 | 65000 | 2026-02-02 16:25:10.921000 |
 +-----+-------+---------+------------+-------+----------------------------+
 
+DATE:03.02.2026
+=================================================================================
+@Entity
+@Table
+@Id
+@Column
+@GeneratedValue(strategy=GenerationType.IDENTITY)
+@Temporal(TemporalType.Date)
+@Temporal(TemporalType.Timestamp)
+@OneToOne
+@JoinColumn
+@CreationTimeStamp
+===============================================================================
+mysql> USE JAVAFULLSTACKDBS;
+Database changed
+mysql> SELECT * FROM CANDIDATE;
++--------+--------+
+| candid | candnm |
++--------+--------+
+| C1     | ROBIN  |
+| C2     | AJOY   |
++--------+--------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM ADHAR;
++-----------+---------+
+| adharid   | city    |
++-----------+---------+
+| 453453654 | DELHI   |
+| 74747     | KOLKATA |
++-----------+---------+
+2 rows in set (0.02 sec)
 
 
+mysql> SELECT * FROM ADHAR;
++-----------+---------+
+| adharid   | city    |
++-----------+---------+
+| 453453654 | DELHI   |
+| 74747     | KOLKATA |
++-----------+---------+
+2 rows in set (0.00 sec)
 
+mysql> SELECT * FROM CANDIDATE;
++--------+--------+-----------+
+| candid | candnm | adhar_id  |
++--------+--------+-----------+
+| C1     | ROBIN  | 74747     |
+| C2     | AJOY   | 453453654 |
++--------+--------+-----------+
+CRUD OPERATION IN HIBERNATE
+========================================================================
+INSERT
+UPDATE
+DELETE
+FETCH
+TABLE:JOB
+jobid===PRIMARY KEY===LENGTH 10
+jobnm====LENGTH=25  NOT NULL
+domain===LENGTH 25  NOT NULL
 
+mysql> DESC JOB;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| jobid  | varchar(10) | NO   | PRI | NULL    |       |
+| domain | varchar(25) | NO   |     | NULL    |       |
+| jobnm  | varchar(25) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+mysql> SELECT * FROM JOB;
++-------+------------+-----------+
+| jobid | domain     | jobnm     |
++-------+------------+-----------+
+| J1    | SPRINGBOOT | DEVELOPER |
+| J2    | PYTHON     | ANALYST   |
++-------+------------+-----------+
+FETCHING DATA IN HIBERNATE
+===========================================================
+THREE WAYS
+======================================
+1.HQL==HIBERNATE QUERY LANGUAGE==========KNOWN THE ENTITY CLASS NOT THE DATABASE TABLE
+2.JPQL====JAVA PERSISTANCE QUERY LANGUAGE==KNOWN THE ENTITY CLASS NOT THE DATABASE TABLE
+3.NATIVE SQL===ONLY KNOW THE DATABASE TABLE===NORMAL SQL
+=======================================================================================
+SPRING
+====================================================================
+1.DESKTOP APPLICATION=====CORE JAVA,AWT,SWING,SPRING        ===JAR FILE
+2.WEB APPLICATION========SERVLET,JSP,SPRING                 ====WAR FILE
+3.ENTERPRISE APPLICATION==EJB,SPRING                        ====EAR FILE(JAR+WAR)
+==============================================================================
+DEFINATION OF SPRING
+=================================================================
+SPRING IS AN OPEN SOURCE LIGHT WEIGHT DEPENDENCY INJECTION BASED FRAMEWORK SOFTWARE
+TO DEVELOP JAVA/JEE BASED ENTERPRISE APPLICATION
+===================================================================
+FRAMEWORK
+==========================================================
+TECHNOLOGY+DESIGN PATTERN
+WEB TECHNOLOGY===SERVLET,JSP
+MAILING TECHNOLOGY====JAVA MAIL
+MESSAGE TECHNOLOGY====KAFKA
+DESIGN PATTERN
+=====================================================
+WELL APPROVED SOLUTION
+PURPOSE
+==========================================================
+RAD===RAPID APPLICATION DEVELOPMENT
 
+FEATURES OF SPRING
+===========================================================
+IT SUPPORT CONTAINER SYSTEM
+==================================================================
+CONTAINER SYSTEM
+================================================================
+1.SCAN THE CLASSES
+2.CREATE THE OBJECT
+3.PROVIDE THE DATA TO THE OBJECT
+4.LINKING BETWEEN OBJECT
+5.DESTROY THE OBJECT
+=================================================================
+SPRING BEAN===CLASS+RULES GIVEN BY SPRING
+class Test
+{
+   private String tested;====
+   private String testnm;
 
+DEPENDENCY
+=========================================
+in spring bean class the instance variable are called dependency
+PROVIDE THE DATA INTO DEPENDENCY CALLED DEPENDENCY INJECTION
+LINKING BETWEEN OBJECTS
 
-
-
-
-
+IN SPRING TWO CONTAINER AVAILABLE
+===================================================
+1.BEANFACTORY===LEGACY 
+2.APPLICATION CONTEXT
+===================================================
+MODULES IN SPRING
+=====================================================
+1.SPRING CORE
+2.SPRING DAO
+3.SPRING ORM
+4.SPRING CONTEXT
+5.SPRING AOP
+6.SPRING WEB
+7.SPRING MVC
+================================================================
+SPRING CORE
+===================================================================
+THE RULES AND REGULATIONS GIVEN BY SPRING
+SPRING BEAN CLASS
+=======================================
+RULES
+===========================================
+1.CLASS PUBLIC
+2.SUPER CLASS CONSTRUCTOR
+3.PARAMETERISED CONSTRUCTOR
+4.GETTER AND SETTER METHOD
+5.toString()
+6.HASHCODE
+7.EQUALS()
+======================================================
+TYPES OF DEPENDENCY INJECTION
+========================================================
+1.PRIMITIVE TYPES==int,double,float
+2.COLLECTION TYPES==LIST,SET,MAP,PROPERTIES
+3.CONSTRUCTOR
+4.INTERFACE
+5.FIELD
+=========================================
+TYPES OF ANNTATION
+==================================
+1.BASIC ANNOTATION
+2.STREO TYPE ANNOTATION
+========================================================
+AS A DEVELOPER WHAT CAN I DO?
+======================================================   
+1.SPRING BEAN CLASS====com.arindam.bean
+2.spring configuration===com.arindam.config===SpringConfig
+5.MAIN CLASS=============com.arindam.app====ClientApp
+DEPENDENCY REQUIRED
+===========================================
+ONLY SPRING CORE
+================================================
+MAVEN PROJECT===SpringAll
+============================================================================
+SPRING ANNOTATION
+=================================================================
+@Component========================CREATE THE OBJECT IN SPRING CONTAINER
+@ComponentScan(basepackages="")===SCAN THE BASE PACKAGES
+@Value============================PROVIDE DATA TO THE DEPENDENCY
+=====================================================================
+READING THE PROPERTIES FILE
+=========================================================================
+.properties
+application.properties
+src=main=resources==========>application.properties
+DbConn
+==============================================================================
+LINKING BETWEEN OBJECTS
+===============================================================================
+BOOK
+CATEGORY
+===================================================================================
+@Bean
+    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+}
 
 
 
