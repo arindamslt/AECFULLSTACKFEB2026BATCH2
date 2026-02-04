@@ -494,6 +494,78 @@ CATEGORY
     }
 }
 
+======================================================================================
+public interface CrudRepository<T, ID> extends Repository<T, ID>
+public interface JpaRepository<T,ID> extends PagingAndSortingRepository<T,ID>, QueryByExampleExecutor<T>
+================================================================================
+DATE:04.02.2026
+===================================================================================
+SPRING BOOT
+==============================================================================
+LIMITATION OF SPRING
+====================================================================
+1.WE NEED LOT OF DEPENDENCIES AND JAR FILES
+2.YOU TO CONFIGURE LOT OF THINGS
+3.DEPLOY YOUR APPLICATION IN EXTERNAL SERVER
+SPRING BOOT
+=============================================================
+SPRING BOOT IS AN ARCHIETECTURAL STYLE BUILD ON TOP OF THE SPRING
+ADVANTAGE
+===============================================================
+1.STARTER DEPENDENCY
+====================================================================
+GROUP OF RELATED JAR FILES OF DIFFERENT MODULES GROUP TOGETHER INTO SINGLE UNIT
+Ex:SpringBootStarterweb
+   springbootstarter
+springbootstartertest
+===============================================================
+2.AUTOCONFIGUTAION
+===========================================================
+LOT OF THINGS ARE AUTOCONFIGURED
+BY DEFAULT AUTOCONFIGURATION IS DISABLED
+@EnableAutoConfiguration
+========================================================
+3.EMBEDDED SERVER
+===============================================
+SPRING BOOT=SPRING-XML+EMBEDDED SERVER
+========================================================
+IN SPRING BOOT PROJECT
+==================================================================
+
+MAIN CLASS
+==============================================================
+@SpringBootApplication
+=============================================================
+1.@ComponentScan
+2.@Configuration
+3.@EnableAutoConfiguration
+=========================================================================
+HOW CAN I CREATE THE SPRING BOOT PROJECT
+=====================================================================
+1.MAVEN
+2.GRADLE
+3.SPRING BOOT STARTER====spring.io
+4.SPRING INITIALIZER======spring.io
+=========================================================================
+SPRING BOOT STARTER PROJECT
+====================================================================
+1.MAIN CLASS
+2.src/main/resources====application.properties
+POM.XML====DEPENDENCY ADDED
+===========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
