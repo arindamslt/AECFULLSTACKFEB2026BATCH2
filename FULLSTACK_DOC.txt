@@ -553,14 +553,146 @@ SPRING BOOT STARTER PROJECT
 2.src/main/resources====application.properties
 POM.XML====DEPENDENCY ADDED
 ===========================================================
+CREATE TABLE ACCOUNT
+(ACCNO  VARCHAR(10),
+ CNAME  VARCHAR(25) NOT NULL,
+BALANCE  DECIMAL,
+CONSTRAINT ACCOUNT_ACCNO_PK PRIMARY KEY(ACCNO)
+);
+
+mysql> DESC ACCOUNT;
++---------+---------------+------+-----+---------+-------+
+| Field   | Type          | Null | Key | Default | Extra |
++---------+---------------+------+-----+---------+-------+
+| ACCNO   | varchar(10)   | NO   | PRI | NULL    |       |
+| CNAME   | varchar(25)   | NO   |     | NULL    |       |
+| BALANCE | decimal(10,0) | YES  |     | NULL    |       |
++---------+---------------+------+-----+---------+-------+
+
+SPRING STARTER PROJECT
+=================================================================
+BootJdbc
+DEPENDENCY
+============================
+MYSQL
+JDBCAPI
+====================================================
+SCOPE
+================
+PROTOTYPE
+SINGLETON
+SESSION
+REQUEST
+==============================================
+SPRING HIBERNATE INTEGRATION USING SPRING BOOT DATA JPA
+====================================================================================
+SPRING DATA JPA
+=================================================================================
+USED TO COMMUNICATE ANY ORM
+ORM ARE:HIBERNATE,JDO,TOPLINK,IBATIS
+BY DEFAULT DATA JPA COMMUNICATE WITH HIBERNATE
+TWO IMPORTANT INTERFACES
+=============================================================
+CrudRepository===interface
+======================================================================
+ALL METHODS OF ORM AVAILABLE
+save()
+findAll()
+findbyId()
+delete()
+JpaRepository==interface
+=====================================================
+ALL THE METHODS OF CrudRepository IN ADDITION TO THAT PAGING AND SORTING POSSIBLE
+============================================================================
+public Interface CrudRepository<T,ID>
+T=ENTITY CLASS NAME
+ID==DATATYPE OF PRIMARY KEY
+
+public interface CrudRepository<T, ID> extends Repository<T, ID>
+
+public interface JpaRepository<T,ID> extends PagingAndSortingRepository<T,ID>, QueryByExampleExecutor<T>
+FLOW OF DATA JPA
+===============================================
+@Entity
+@Table
+@Column
+@ID
+@Temporal
+@OneToone
+@JoinColumn
+@GeneratedValue
+@Component
+@ComponentScan
+@propertySource
+@ConfigurationProperties
+@SpringBootApplication
+@Repository
+@Service
+@Autowire
+@Scope
+===========================================================================
+PROJECT NAME
+===============================================
+BootDataJPA
+DEPENDENCY REQUIRED
+=====================================
+MYSQL
+SPRING DATA JPA
+============================================
+TABLE:Tour
+tid   varchar  10 ===PRIMARY KEY
+tname  varchar 25  -==NOT NULL
+price   DECIMAL
+===========================================
+com.arindam.model======Tour
+ com.arindam.repository ====TourRepository
+com.arindam.service===TourService
 
 
+mysql> USE JAVAFULLSTACKDBS;
+Database changed
+mysql> DESC TOUR;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| tid   | varchar(10) | NO   | PRI | NULL    |       |
+| price | double      | YES  |     | NULL    |       |
+| tname | varchar(25) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
 
+mysql> SELECT * FROM TOUR;
++-----+-------+--------+
+| tid | price | tname  |
++-----+-------+--------+
+| T1  | 20000 | DOOARS |
++-----+-------+--------+
 
+===========================================================================
+mysql> SELECT * FROM TOUR;
++-----+-------+---------+
+| tid | price | tname   |
++-----+-------+---------+
+| T1  | 20000 | DOOARS  |
+| T2  | 30000 | KUMAYON |
++-----+-------+---------+
+2 rows in set (0.00 sec)
+=============================================================================
 
+ADDING DATA
+FETCHING DATA
+FETCH DATA BY PRIMARY KEY
+DELETE DATA
+UPDATE DATA
+=============================================================================
 
-
-
+mysql> SELECT * FROM TOUR  WHERE TID='T1';
++-----+-------+--------+
+| tid | price | tname  |
++-----+-------+--------+
+| T1  | 20000 | DOOARS |
++-----+-------+--------+
+1 row in set (0.02 sec)
 
 
 
