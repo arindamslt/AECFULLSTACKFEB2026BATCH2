@@ -693,6 +693,196 @@ mysql> SELECT * FROM TOUR  WHERE TID='T1';
 | T1  | 20000 | DOOARS |
 +-----+-------+--------+
 1 row in set (0.02 sec)
+=================================================================================
+DATE:05.02.2026
+================================================================================
+RESTFULL WEBSERVICES
+================================================================================
+WEBSERVICE
+=================================================================================
+WEBSERVICE USED TO COMMUNICATE BETWEEN TWO INTEROPERABLE APPLICATIONS
+================================================================================
+TYPES OF WEBSERVICE
+===================================================
+1.SOAP==SIMPLE ACCESS OBJECT PROTOCOL===IT SUPPORT ONLY XML
+2.REST===REPRESENTATIONAL STATE TRANSFER===IT SUPPORT BOTH XML AND JSON
+========================================================================
+HTTP METHODS
+========================================================
+1.POST===ADD THE DATA TO THE SERVER
+2.GET====GET THE DATA FROM THE SERVER
+3.DELETE==DELETE DATA FROM THE SERVER
+4.PUT====UPDATE DATA TO THE SERVER
+5.PATCH==UPDATE DATA TO THE SERVER BUT NOT ALL DATA
+=================================================================
+HTTP ERROR  CODE
+=============================================
+404===NOT FOUND
+500==INTERNAL SERVER ERROR
+200===OK
+405
+================================================================
+URL TYPES
+==============================================================
+ACTION BASED URL
+================================================================
+http://www.abc.com/?id=1
+                    QUERY PARAMETER
+RESOURCE BASED URL
+=====================================================
+http://www.abc.com/1
+                   PATH VARIABLE
+=============================================================
+@Repository====CREATING OBJECT+DATABASE OPERATION
+@Service=======creation of object+TRANSACTION MANAGEMENT(COMMIT,ROLLBACK,SAVEPOINT)
+@controller=====CREATION OF OBJECT+WEB APPLICATION
+@RestController==CREATION OF OBJECT+REST FULL WEBSERVICES
+======================================================
+JSON==JAVASCRIPT OBJECT NOTATION
+
+ 
+
+{
+
+   "id":1,
+   "nm":"SUMAN"
+ 
+ }
+com.arindam.model====ENTITY CLASS
+com.arindam.repository===INTERFACE
+com.arindam.service======SERVICE CLASS
+com.arindam.controller====REST CONTROLLER
+========================================================================
+SPRING BOOT PROJECT NAME:RESTAPI
+DEPENDENCY REQUIRED
+==========================================
+1.MYSQL
+2.SPRING DATA JPA
+3.SPRING WEB
+4.SPRING DEV TOOLS
+======================================================
+REST API TOOLS===POSTMAN
+=================================================================
+TABLE:Product
+pid=====varchar ===10==primary key
+pname==varchar===25===not null
+pqty===INT
+price==DECIMAL
+
+com.arindam.repository==ProductRepository
+
+com.arindam.service====ProductService===========class
+com.arindam.controller===ProductController
+http://localhost:1004/product/add====ADDING DATA
+http://localhost:1004/product/fetch===GET DATA
+
+mysql> DESC PRODUCT;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| pid   | varchar(10) | NO   | PRI | NULL    |       |
+| pname | varchar(25) | NO   |     | NULL    |       |
+| pqty  | int         | YES  |     | NULL    |       |
+| price | double      | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+
+http://localhost:1004/product/add
+
+http://localhost:1004/product/add
+{
+  "pid":"P1",
+  "pname":"TV",
+  "pqty":5,
+  "price":25000.00
+}
+mysql> SELECT * FROM PRODUCT;
++-----+-------+------+-------+
+| pid | pname | pqty | price |
++-----+-------+------+-------+
+| P1  | TV    |    5 | 25000 |
++-----+-------+------+-------+
+1 row in set (0.02 sec)
+
+FETCHING DATA
+========================================================================
+URL====http://localhost:1004/product/fetch====METHOD IS @GetMapping
+       http://localhost:1004/product/fetch/P1====
+                                          @pathvariable
+          http://localhost:1004/product/del/P2====METHOD @deleteMapping
+http://localhost:1004/product/upd/P1===============METHOD IS DELETE
+
+@PutMapping("/upd/{pid}")
+	public ResponseEntity<Product> updateData(@PathVariable String pid,
+@RequestBody Product newproduct)
+	{
+		Product ps=pservice.updateData(pid, newproduct);
+		return new ResponseEntity<Product>(ps,HttpStatus.OK);
+	}
+=====================================================================================
+VISUAL STUDIO CODE====IDE
+NODE JS===JAVASCRIPT RUN TIME ENVIRONMENT
+===================================================================================================
+JAVASCRIPT
+==============================================================================
+JAVASCRIPT IS A PROGRAMMING LANGUAGE
+JAVASCRIPT CAN COMMUNICATE DATABASE,WEBSERVER,APPLICATION SERVER
+PURPOSE
+========================================================================
+1.DYNAMIC USER  INTERFACE
+2.CLEINT SIDE AND SERVER SIDE VALIDATION
+3.COMMUNICATE FRONT END AS WELL AS BACKEND APPLICATION
+AREAS OF JAVASCRIPT
+=============================================================
+1.DESKTOP APPLICATION
+2.WEB APPLICATION
+3.MOBILE APPLICATION
+4.MACHINE LEARNING APPS
+=================================================================
+NODEJS===JAVASCRIPT RUNTIME ENVIRONMENT
+=======================================================================
+DATA TYPES
+=========================================================================
+PRIMITIVE TYPES
+=============================================================================
+number,boolean,string,symbol,null,undefined,bigint
+NON PRIMITIVE TYPES
+===========================================================================
+object
+============================================================================
+VARIABLE CAN BE DECLARED BY THREE WAYS
+=================================================
+var
+let
+const
+=====================================================
+IDE
+=================
+VISUAL STUDIO CODE====IDE
+SOFTWARE===NODE JS
+========================================================
+JAVAFULLSTACKFRONTENDDEV
+TYPES OF FUNCTION IN JAVASCRIPT
+============================================
+1.NORMAL OR CONCRETE FUNCTION
+2.PARAMETERISED FUNCTION
+3.FUNCTION WITH RETURN STATEMENT
+4.ANNONYMOUS FUNCTION
+5.CALLBACK FUNCTION
+6.HIGHER ORDER FUNCTION
+7.ARROW FUNCTION
+=================================================
+ARRAY
+=======================================================
+ECMASCRIPT(ES6)
+=========================================================
+1.SPREAD OPERATOR
+2.REST PARAMETER
+3.DESTRUCTING OF OBJECT
+4.ARROW FUNCTION
+5.LET VS CONST VS VAR
+============================================================
+
+
 
 
 
