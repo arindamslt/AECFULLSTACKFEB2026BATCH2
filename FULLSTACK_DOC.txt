@@ -882,6 +882,94 @@ ECMASCRIPT(ES6)
 5.LET VS CONST VS VAR
 ============================================================
 
+ES7+ React/Redux/React-Native snippets
+=================================================================
+
+DATE:06.02.2026
+====================================================================
+EVENT HANDELLIG
+================================================================
+DOM
+==========================================================
+DOCUMENT OBJECT MODEL
+HTML ELEMENT CONVERTED TO OBJECTS CALLED NODES.WHEN NODES ARE ARRANGED
+IN TREE LIKE DATA STRUCTURE THEN IT IS CALLED DOM
+HTML CODE====BROWSER ENGINE====BYTES===TOKENS===NODES
+REACT JS
+====================================
+REACT JS IS JAVA SCRIPT LIBRARY
+JAVASCRIPT LIBRARY====COLLECTION OF JAVASCRIPT CLASSES AND FUNCTIONS
+PURPOSE
+====================================================
+CREATE USER INTERFACE
+REACT ALONE CAN'T DO THE FRONT END APPLICATION
+FRONT END APPLICATION==REACT+OTHER LIBRARIES
+====================================================
+REACT ELEMENT
+================================================
+REACT ELEMENT====HANDED OVER TO===ReactDOM===CALLED render()====GOES TO ===DOM==ADDED TO CSSDOM
+====RENDERING TREE==DISPLAY ON BROWSER
+JSX
+============================================================
+99% SIMILAR TO HTML
+IT IS TO BE CREATED IN JAVASCRIPT FUNCTION
+AND IT RETURNS UI
+FOR RUNNING THE JSX WE NEED babel compiler
+JSX===babel compiler===reactelement===reactdom==render()===dom==added cssdom==rendering tree
+====display on browser
+REACT COMPONENT
+===============================
+TWO TYPES
+=============================================
+CLASS COMPONENT
+FUNCTIONAL COMPONENT
+FUNCTIONAL COMPONENT
+===========================================================
+IT IS STARED WITH CAPITAL LETTER
+IT RETURNS UI I.E.JSX
+==================================================
+npx create-react-app appdemo
+CRA TOOL
+=========================================================
+CREATE REACT APP TOOL
+INSTALL TWO WAYS
+=============================================
+1.npm install create-react-app appdemo
+2.npx create-react-app appdemo=====RUNNING THE TOOL
+CRA
+===================================================
+1.IT WILL MANAGE THE ALL COMPONENTS
+2.IT WILL COMPILE THE SOURCE CODE
+3.IT USED BABEL COMPILER
+4.IT WILL GIVE SINGLE PAGE APPLICATION===index.html
+5.jsx converted to ReactElement===reactdom==render()====dom after call the local server
+and display into the browser
+=================================================================================
+FILES
+================================================
+App.js===FUNCTIONAL COMPONENT
+index.js
+index.html
+===========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
