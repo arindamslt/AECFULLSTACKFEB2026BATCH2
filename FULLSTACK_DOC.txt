@@ -951,8 +951,25 @@ App.js===FUNCTIONAL COMPONENT
 index.js
 index.html
 ===========================================================
+cd appdemo
+npm start
 
+ES7+ React/Redux/React-Native snippets
+REACT HOOKS
+=================================================
+REACT HOOK IS A SPECICAL FUNCTION IT IS USED FOR SPECIAL PURPOSE
+IT STARTED WITH use
+THE LIST OF IMPORTANT REACT HOOK
+=============================================================================
+1.useState
+2.useRef
+3.useContext
+4.useCallback
+5.useNavigate
+6.useEffect
+7.useReducer
 
+onClick={}
 
 
 
