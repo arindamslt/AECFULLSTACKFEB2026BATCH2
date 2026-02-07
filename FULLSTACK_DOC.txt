@@ -973,9 +973,50 @@ onClick={}
 ================================================================================
 DATE:07.02.206
 ================================================================================
+PROMISE OBJECT
+========================================================================
+PROMISE IS AN JAVASCRIPT OBJECT WHICH PROVIDES FUTURE RESULTS OF ASYNCHRONOUS OPERATIONS
+COMMUNICATION
+==========================================================================
+SYNCHRONOUS
+=========================================================================
+SEND IS WAITING FOR RESPONSE
+EX:BOOK A TICKET
+SPRING BOOT REST API
+ASYNCHRONOUS
+=============================================================
+SENDER IS NOT WAITING FOR RESPONSE RESPONSE CAN BE DELIVER LATER
+EX:WHATSAPP MESSAGE
+    SENDING EMAIL
 
-
-
+PROMISE OBJECT
+======================================================
+STATES
+==================================
+PENDING ===STILL NOT SUCCESSFULL
+FULLFILED====SUCCESSFULL
+REJECTED====NOT SUCCESSFULL
+WHERE APPLIED
+=============================================
+1.API CALLS
+2.DATABASE CALL
+3.FILE READING
+4.TIME OUT
+=================================================
+new Promise(resolve,reject)
+========================================================
+AXIOS
+=======================================================================
+AXIOS IS A LIBRARY WHICH USED TO COMMUNICATE EXTERNAL SERVER IT RETURNS
+PROMISE OBJECT
+METHOD
+=======================================
+POST()
+GET()
+DELETE()
+PUT()
+PATCH()
+======================================================
 
 
 
