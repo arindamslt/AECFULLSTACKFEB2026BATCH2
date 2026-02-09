@@ -18,6 +18,8 @@ import Electronics from './component/nestedrouting/Electronics';
 import Garments from './component/nestedrouting/Garments';
 import Retails from './component/nestedrouting/Retails';
 import Jewellery from './component/nestedrouting/Jewellery';
+import ProductReport from './component/bootreact/ProductReport';
+import AddProduct from './component/bootreact/AddProduct';
 function App() {
   return (
     <div className="App">
@@ -32,6 +34,8 @@ function App() {
           <Route path="/axios" element={<User/> }/>
            <Route path="/useeffect" element={<UserInfo/> }/>
             <Route path="/crend" element={<Main/> }/>
+             <Route path="/preport" element={<ProductReport/> }/>
+             <Route path="/addproduct" element={<AddProduct/> }/>
              <Route path="/product" element={<Product/> }>
                   <Route path="electronics" element={<Electronics/> }/>
                    <Route path="garments" element={<Garments/> }/>
