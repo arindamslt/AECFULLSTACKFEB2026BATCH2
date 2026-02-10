@@ -1,0 +1,6 @@
+myapp:
+ db:
+  driver: com.mysql.cj.driver
+  url: localhost:3306
+  uname: root
+  pass: arindam

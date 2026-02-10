@@ -1056,18 +1056,95 @@ NESTED ROUTING
 =============================================================================
 INTEGRTION SPRING BOOT WITH REACT JS
 =================================================================================
+NEED TO OPEN
+=================================================================
+1.MYSQL
+2.STS
+3.POSTMAN
+4.VSCODE
+========================================================
+mysql> USE JAVAFULLSTACKDBS;
+Database changed
+mysql> SHOW TABLES;
++----------------------------+
+| Tables_in_javafullstackdbs |
++----------------------------+
+| account                    |
+| adhar                      |
+| candidate                  |
+| customer                   |
+| dept                       |
+| dept1                      |
+| emp                        |
+| employee_master            |
+| event                      |
+| job                        |
+| product                    |
+| student                    |
+| tour                       |
++----------------------------+
+13 rows in set (0.06 sec)
 
+mysql> SELECT * FROM PRODUCT;
++-----+------------+------+-------+
+| pid | pname      | pqty | price |
++-----+------------+------+-------+
+| P1  | TAB        |    2 | 22000 |
+| P2  | FRIED RICE |    2 |   450 |
+| P4  | PIZZA      |    1 |   450 |
++-----+------------+------+-------+
 
+======================================================
+What is BindingResult?
+It contains:
+1.All validation errors
+2.Field name
+3.Rejected value
+4.Error codes
+5.Default message
+=========================================
+.getFieldErrors()
 
+What it returns
 
+A list of FieldError objects.
 
+Each FieldError contains:
 
+field → pname
 
+defaultMessage → PRODUCT NAME MUST BE GIVEN
 
+FieldError {
+  field = "pname"
+  defaultMessage = "PRODUCT NAME MUST BE GIVEN"
+}
+======================================================
 
+let[errors,setErrors]=useState({
+        efname:"",
+        eprice:""
+     })
 
-
-
+ const addData=()=>{ 
+       axios.post("http://localhost:1004/food/add",food)
+       .then((res)=>{ 
+       console.log(res.data);
+       setMsg(res.data);
+       })
+       .catch((error)=>{ 
+        console.log(error);
+       // alert("SOMETHING WENT WRONG FOR STORING DATA");
+        setErrors({
+            efname:error.response.data.fname,
+            eprice:error.response.data.price
+        })
+       })
+     }
+==================================================================
+GlobalExceptionHandler
+ResourceNotFoundException
+============================================================
 
 
 
