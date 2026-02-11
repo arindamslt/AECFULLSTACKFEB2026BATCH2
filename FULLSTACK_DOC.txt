@@ -1147,24 +1147,128 @@ ResourceNotFoundException
 ============================================================
 DATE:10.02.2026
 ==============================================================
+FULL STACK DEVELOPMENT USING SPRING BOOT AND REACT JS USING PROJECT
+==========================================================================
+SOFTWARE REQUIRED
+===============================
+JAVA 17
+MYSQL
+NODE JS
+IDE
+========================
+STS
+VSCODE
+MYSQL WORKBENCH
+======================================
+TECHNOLOGY
+=========================================
+DATABASE
+====================================
+RDBMS SOFTWARE
+===================
+MYSQL
+BACKEND
+===============================
+SPRING BOOT,SPRING
+DATA JPA,HIBERNATE
+JAKARTA VALIDATION
+FRONT END
+===================================
+REACT JS
+EXTERNAL LIBRARIES 
+==============================
+AXIOS
+REACT ROUTER  DOM
 
+REST API TOOLS
+==================================
+POSTMAN
+PROJECT NAME
+=================================
+FOOD APP
+TWO KINDS OF USER
+===============================
+ADMIN
+CLIENT
+=============================================================
+DATABASE
+================================
+FOODSAPPS
+mysql> CREATE DATABASE FOODSAPPS;
+Query OK, 1 row affected (0.03 sec)
 
+mysql> USE FOODSAPPS;
+Database changed
+mysql> SHOW TABLES;
+Empty set (0.03 sec)
+VS CODE
+=========================================================
+npx create-react-app foodapp
+=================================================================
+SPRING BOOT PROJECT
+=================================================================
+PROJECTNAME:FoodApp
+DEPENDENCY
+====================================
+MYSQL
+DATA JPA
+SPRING WEB
+SPRING BOOT DEV TOOLS
+VALIDATION
+===============================================
+com.arindam.model
+====================
+Food
 
+mysql> DESC FOOD;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| fid   | varchar(10) | NO   | PRI | NULL    |       |
+| fname | varchar(25) | NO   |     | NULL    |       |
+| price | double      | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+{
+   "fid":"F1",
+   "fname":"PIZAA",
+   "price":250.00
 
+ }
+localhost:1004/food/add
 
+DATE:11.02.2026
+=======================================================================================
 
+  CLIENT MENU
+============================================
+Home.js
+Register.js
+Login.js
+NavClient.js
+FoodListClient.js
+SearchFoodClient.js
+Billing.js
+AddOrder.js
+{
+"uname":"ALOKE123",
+"pass":"123456",
+"nm":"ALOKE",
+"email":"al@gmail.com",
+"phno":"655665"
+}
+http://localhost:1004/register/add
+mysql> SELECT * FROM REGISTER;
++----------+--------------+-------+--------+--------+
+| uname    | email        | nm    | pass   | phno   |
++----------+--------------+-------+--------+--------+
+| ALOKE123 | al@gmail.com | ALOKE | 123456 | 655665 |
++----------+--------------+-------+--------+--------+
+SELECT * FROM REGISTER WHERE UNAME='ALOKE123' AND PASS='123456';
 
-
-
-
-
-
-
-
-
-
-
-
+http://localhost:1004/register/login/ALOKE123/123456
+================================================================
+Register.js
+=====================================================================
 
 
 
